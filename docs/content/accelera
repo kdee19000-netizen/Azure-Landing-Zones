@@ -1,4 +1,4 @@
----
+_index.md
 title: Accelerator
 geekdocCollapseSection: true
 weight: 20
