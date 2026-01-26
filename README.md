@@ -1,4 +1,4 @@
-# Azure landing zone
+README.md
 
 This site contains documentation for the Azure landing zone software:
 
