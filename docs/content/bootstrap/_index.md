@@ -36,13 +36,13 @@ Take note of the subscription id of each subscription as we will need them later
 
 You need either an Azure User Account or Service Principal with the following permissions to run the bootstrap. For simplicity, we recommend using a User account since this is a one off process that you are unlikely to repeat.
 
-### Bicep (AVM), Bicep Classic, and Terraform all require the following permissions:
+### Bicep and Terraform both require the following permissions:
 
 - `Owner` on your chosen parent management group.
   - `Owner` is required because this account grants permissions to the identities that run the management group deployment. Those identities are granted only the permissions they need.
-- `Owner` on each of your 3 Azure landing zone subscriptions.
+- `Owner` on each of your 4 Azure landing zone subscriptions.
 
-### Bicep (AVM) has one additional requirement:
+### Bicep has one additional requirement:
 
 - `User Access Administrator` at that root `/` level.
   - `User Access Administrator` is required for the same reason: this account delegates access to the identities that run the management group deployment using least privilege.
@@ -61,10 +61,11 @@ The ALZ IaC Accelerator allows you to quickly get started with IaC and DevOps be
 
 It supports both Terraform and Bicep:
 
-- [**ALZ IaC Accelerator**]({{< relref "accelerator" >}})
+- [**ALZ IaC accelerator**]({{< relref "accelerator" >}}) (recommended) - This is the recommended approach for most customers. It provides a streamlined experience with built-in best practices and CI/CD pipelines to get you up and running quickly.
+- [**Portal accelerator**]({{< relref "portal" >}}) - It provides an Azure Portal based experience for deploying the new modules.
+
 
 You can also opt to use Bicep and Terraform directly:
 
 - [**Bicep**]({{< relref "bicep" >}})
-- [**Bicep Classic**]({{< relref "bicep-classic" >}})
 - [**Terraform**]({{< relref "terraform" >}})
